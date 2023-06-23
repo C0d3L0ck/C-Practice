@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ENUM.Enums;
+
+namespace ENUM
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region variables
+            string hi = "Hello";
+            var Diccionario = new Dictionary<string, string>
+            {
+                { "H", "b" },
+                { "e", "&" },
+                { "o", "4" },
+                { "l", "(" },
+                { "s", "/" }
+            };
+            string Message = "";
+            #endregion
+
+            foreach (var it in hi)
+            {
+                foreach (var key in Diccionario)
+                {
+                    if (it.ToString() == key.Key) Message += key.Value;
+                }
+            }
+            Console.WriteLine(Message); Console.ReadKey(true);
+        }
+    }
+}
